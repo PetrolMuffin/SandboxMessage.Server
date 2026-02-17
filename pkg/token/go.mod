@@ -1,4 +1,4 @@
-module github.com/petrolmuffin/sandboxmessage.server/pkg/token
+module github.com/petrolmuffin/sandboxmessage-server/pkg/token
 
 go 1.25.6
 
