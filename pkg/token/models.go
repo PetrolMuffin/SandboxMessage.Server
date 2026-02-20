@@ -1,9 +1,0 @@
-package token
-
-import "github.com/golang-jwt/jwt/v5"
-
-type Claims struct {
-	jwt.RegisteredClaims
-	Role   string `json:"role,omitempty"`
-	UserID int64  `json:"uid" validate:"required"`
-}

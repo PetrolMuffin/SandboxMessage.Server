@@ -1,4 +1,4 @@
-package token
+package jwt
 
 import (
 	"errors"
@@ -6,6 +6,12 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 )
+
+type Claims struct {
+	jwt.RegisteredClaims
+	Role   string `json:"role,omitempty"`
+	UserID int64  `json:"uid" validate:"required"`
+}
 
 func ParseToken(tokenString string, secret []byte) (*Claims, error) {
 	keyFunc := func(token *jwt.Token) (any, error) {
