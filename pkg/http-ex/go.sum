@@ -1,0 +1,4 @@
+github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/petrolmuffin/sandboxmessage-server/pkg/log v0.0.2 h1:5k/eTBqTbRvN5Fk9O4nW5ISfUZ2hn8uKRS4Rdxzz0zM=
+github.com/petrolmuffin/sandboxmessage-server/pkg/log v0.0.2/go.mod h1:gDbs8zKCBFChHDgrZUX8fMHHiNev1rzSevaLgO2zkYs=
