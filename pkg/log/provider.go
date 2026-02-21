@@ -1,4 +1,4 @@
-package logger
+package log
 
 import (
 	"context"
@@ -9,7 +9,7 @@ type loggerKeyType struct{}
 
 var loggerKey = loggerKeyType{}
 
-func GetLogger(ctx context.Context) Logger {
+func CtxLogger(ctx context.Context) Logger {
 	logger, ok := ctx.Value(loggerKey).(Logger)
 	if !ok {
 		logger = NewLog(slog.Default())
@@ -19,7 +19,7 @@ func GetLogger(ctx context.Context) Logger {
 	return logger
 }
 
-func RegisterLogger(ctx context.Context, log *slog.Logger) context.Context {
+func WithLogger(ctx context.Context, log *slog.Logger) context.Context {
 	return withLogger(ctx, NewLog(log))
 }
 
