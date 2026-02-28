@@ -1,2 +1,1 @@
-# PMessage.Server
-Private messenger for self-deployment
+Secured messenger for self-deployment
