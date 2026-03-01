@@ -16,6 +16,10 @@ const (
 	EmitFormatJson
 )
 
+type Emitter interface {
+	Emit(ctx context.Context, command string, data proto.Message) error
+}
+
 func (b *NatsBroker) Emit(ctx context.Context, command string, data proto.Message) error {
 	logger := log.CtxLogger(ctx)
 

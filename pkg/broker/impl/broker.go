@@ -15,10 +15,6 @@ const (
 	dlqSuffix = ".dlq"
 )
 
-type Broker interface {
-	Listen(ctx context.Context, consumers ...anyConsumer) error
-}
-
 type NatsBroker struct {
 	js        jetstream.JetStream
 	waitGroup sync.WaitGroup

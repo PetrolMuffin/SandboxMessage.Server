@@ -12,7 +12,3 @@ var (
 	ErrQueueRequired     = errors.New("queue required")
 	ErrInvalidRequest    = errors.New("invalid request")
 )
-
-type BackendError struct{ Msg string }
-
-func (e *BackendError) Error() string { return e.Msg }

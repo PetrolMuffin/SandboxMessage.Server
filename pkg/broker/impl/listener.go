@@ -17,6 +17,10 @@ const (
 	dlqDeliveryAttemptsHeader = "X-Delivery-Attempts"
 )
 
+type Listener interface {
+	Listen(ctx context.Context, consumers ...anyConsumer) error
+}
+
 func (b *NatsBroker) Listen(ctx context.Context, consumers ...anyConsumer) error {
 	for _, h := range consumers {
 		logger := log.CtxLogger(ctx)
